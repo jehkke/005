@@ -7,16 +7,14 @@ int main(int argc, char *argv[]) {
 	
 	int input;
 	
-	printf("input a interger: ");
+	printf("input an interger:");
 	scanf("%d", &input);
 	
-	if (input > 0)
-		printf("positive number\n");
-	else if (input < 0)
-		printf("negative number\n");	
-	else 
-		printf("zero\n");
+	if (input < 0)
+		input= -input;
 	
+	printf("absolute value is %i\n", input); /* (warning!)if you input positive, positive is printing.
+	when if input<0 case is right, absolute value is printing!! */
 	
 	system("PAUSE");
 	return 0;
