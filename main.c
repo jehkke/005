@@ -5,18 +5,26 @@
 
 int main(int argc, char *argv[]) {
 	
-	int sum=0;
+	int answer =32;
 	int num;
-	int i;
-	
-	printf("input a number:");
-	scanf("%d", &num);
-	
-	for(i=0;i<=num; i++)
+	int trial= 0;
+	do
 	{
-		sum=sum+i;
+		//1.input
+		printf("input a number: ");
+		scanf("%d", &num);
+		
+		//2. decision( low/high) (wrong answer)
+		if (answer>num)
+			printf("high\n");
+		else if (answer<num)
+			printf("low\n");
+		trial= trial+1;
+			
 	}
-	printf("result is %i\n", sum);
+	while(answer!=num); //3. loop condition : answer is equal to num??
+	
+	printf("congratulation! trial:%d\n", trial);
 	
 	system("PAUSE");
 	return 0;
