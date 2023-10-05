@@ -5,16 +5,18 @@
 
 int main(int argc, char *argv[]) {
 	
-	int input;
+	char c;
+	int num =0;
 	
-	printf("input an interger:");
-	scanf("%d", &input);
+	printf("input a string: ");
+	while ( (c= getchar()) != '\n')
+	{
 	
-	if (input < 0)
-		input= -input;
-	
-	printf("absolute value is %i\n", input); /* (warning!)if you input positive, positive is printing.
-	when if input<0 case is right, absolute value is printing!! */
+		if (c>= '0' && c<='9')
+			num=num+1; //num++
+			
+	}
+	printf ("no. of digits is %i\n",num);
 	
 	system("PAUSE");
 	return 0;
